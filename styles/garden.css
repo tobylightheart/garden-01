@@ -246,3 +246,101 @@ a.sprout::before { content: "❧ "; color: var(--moss); }
   .leaf { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ---- the gate's path link ------------------------------------------------ */
+
+.gate-end {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.paths {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.paths:hover { color: var(--moss); }
+
+/* ---- the constellation map ----------------------------------------------- */
+
+.constellation {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.8rem 0 1rem;
+}
+.edge {
+  stroke: var(--line);
+  stroke-width: 2;
+}
+.node { cursor: pointer; }
+.node circle {
+  stroke: var(--paper);
+  stroke-width: 3;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.node:hover circle,
+.node:focus circle {
+  transform: scale(1.3);
+  filter: drop-shadow(0 3px 8px var(--shadow));
+}
+.node--seedling  circle { fill: var(--moss); }
+.node--budding   circle { fill: var(--sun); }
+.node--evergreen circle { fill: var(--moss-deep); }
+.node text {
+  font-family: var(--sans);
+  font-size: 13px;
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 4px;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.node:hover text,
+.node:focus text { opacity: 1; }
+
+.legend {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.6rem;
+}
+
+/* ---- fireflies (dusk only, spawned by garden.js) ------------------------- */
+
+.fireflies {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.firefly {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: drift linear infinite;
+}
+.firefly--sun   { background: radial-gradient(circle, var(--sun),   transparent 70%); box-shadow: 0 0 8px var(--sun); }
+.firefly--bloom { background: radial-gradient(circle, var(--bloom), transparent 70%); box-shadow: 0 0 8px var(--bloom); }
+.firefly--moss  { background: radial-gradient(circle, var(--moss),  transparent 70%); box-shadow: 0 0 8px var(--moss); }
+
+@keyframes drift {
+  0%   { opacity: 0;    transform: translate(0, 0) scale(0.6); }
+  20%  { opacity: 0.9; }
+  50%  { opacity: 0.5;  transform: translate(22px, -34px) scale(1); }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0;    transform: translate(-16px, -64px) scale(0.6); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .firefly { animation: none; }
+}

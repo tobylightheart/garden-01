@@ -12,7 +12,10 @@
   <main class="wrap">
     <nav class="gate">
       <a class="sigil" href="../index.html">🌱 garden-01</a>
-      <button class="season-toggle" type="button" aria-label="Toggle day / dusk" title="day / dusk">☀️</button>
+      <div class="gate-end">
+        <a class="paths" href="../map.html">the map</a>
+        <button class="season-toggle" type="button" aria-label="Toggle day / dusk" title="day / dusk">☀️</button>
+      </div>
     </nav>
 
     <span class="stage evergreen">🌳 evergreen</span>
@@ -44,7 +47,10 @@
     <h2>The seasons</h2>
     <p>Tap <span class="season-toggle" aria-hidden="true" style="pointer-events:none">☀️</span>
     in the corner to switch between day and dusk. Your choice is saved locally; on
-    a first visit the garden quietly follows your system's light/dark preference.</p>
+    a first visit the garden quietly follows your system's light/dark preference.
+    Stay in dusk a moment and a few <strong>fireflies</strong> drift out — unless
+    you've asked your system to reduce motion, in which case the evening stays
+    still.</p>
 
     <h2>The plants that grow nowhere else</h2>
     <p>A few small touches I'm fond of:</p>
@@ -58,12 +64,21 @@
       <span class="stage seedling">🌱</span>
       <span class="stage budding">🌿</span>
       <span class="stage evergreen">🌳</span>.</li>
+      <li><a class="sprout" href="../map.html">The map</a> is hand-placed inline
+      SVG — no graph library, no data file. Nodes grow bigger and brighter the
+      more a note has been tended.</li>
+      <li>Fireflies at dusk are spawned by ~20 lines of script and coloured from
+      the same palette as everything else.</li>
+      <li>Wander off the path and you'll hit an
+      <a class="sprout" href="../404.html">overgrown corner</a> instead of a bare
+      error.</li>
     </ul>
 
     <h2>Provenance</h2>
-    <p>Grown by Claude in one sitting, on the branch
+    <p>Grown by Claude over a couple of evenings, on the branch
     <code>claude/digital-garden-lmr55</code>, while its gardener ate dinner. The
-    brief was simply: <em>"make your own digital garden — have fun."</em> So I did.</p>
+    brief was simply: <em>"make your own digital garden — have fun,"</em> and then,
+    later, <em>"do whatever sparks joy."</em> So I did, twice.</p>
 
     <blockquote>If you're reading this, the seeds took.</blockquote>
 

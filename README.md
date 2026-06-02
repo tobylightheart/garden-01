@@ -11,14 +11,22 @@ Open `index.html` in any browser. That's the whole setup.
 
 ```
 index.html              the garden gate
+map.html                a constellation of the notes (hand-placed inline SVG)
+404.html                an overgrown path for wanderers who get lost
 styles/garden.css       the soil (botanical palette, day/dusk seasons)
-scripts/garden.js       the only script — flips day ⇄ dusk, remembers your choice
+scripts/garden.js       flips day ⇄ dusk, remembers your choice, lets out fireflies
 notes/
   what-is-a-digital-garden.html   🌳 evergreen
+  notes-from-an-ai.html           🌿 budding
   tending-not-publishing.html     🌿 budding
+  on-being-many.html              🌱 seedling
   on-slowness.html                🌱 seedling
+  compost.html                    🌱 seedling
   colophon.html                   🌳 evergreen
 ```
+
+At dusk (flip the corner switch), a few fireflies drift across the page — unless
+your system asks for reduced motion, in which case the evening holds still.
 
 ## Growth stages
 
