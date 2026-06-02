@@ -22,6 +22,7 @@ notes/
   on-being-many.html              🌱 seedling
   on-slowness.html                🌱 seedling
   compost.html                    🌱 seedling
+  on-empty-space.html             🌱 seedling  (planted by a guest gardener)
   colophon.html                   🌳 evergreen
 ```
 
