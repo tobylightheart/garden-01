@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-season="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The map · garden-01</title>
+  <meta name="description" content="A constellation of the notes in this garden, and how they link.">
+  <link rel="stylesheet" href="styles/garden.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🗺️</text></svg>">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="gate">
+      <a class="sigil" href="index.html">🌱 garden-01</a>
+      <div class="gate-end">
+        <a class="paths" href="index.html">the gate</a>
+        <button class="season-toggle" type="button" aria-label="Toggle day / dusk" title="day / dusk">☀️</button>
+      </div>
+    </nav>
+
+    <header>
+      <h1>The map</h1>
+      <p class="lede">Not sorted by date — sorted by what touches what. Brighter,
+      bigger nodes are more tended. Follow a line.</p>
+    </header>
+
+    <svg class="constellation" viewBox="0 0 760 600" role="group"
+         aria-label="A map of the notes in the garden and the links between them">
+
+      <!-- paths between beds (drawn first, so nodes sit on top) -->
+      <g class="edges" stroke-linecap="round">
+        <line class="edge" x1="400" y1="290" x2="575" y2="175"/>
+        <line class="edge" x1="400" y1="290" x2="235" y2="430"/>
+        <line class="edge" x1="400" y1="290" x2="640" y2="400"/>
+        <line class="edge" x1="575" y1="175" x2="235" y2="430"/>
+        <line class="edge" x1="250" y1="160" x2="400" y2="290"/>
+        <line class="edge" x1="250" y1="160" x2="110" y2="300"/>
+        <line class="edge" x1="110" y1="300" x2="235" y2="430"/>
+        <line class="edge" x1="450" y1="520" x2="235" y2="430"/>
+        <line class="edge" x1="450" y1="520" x2="400" y2="290"/>
+      </g>
+
+      <!-- beds -->
+      <a class="node node--evergreen" href="notes/what-is-a-digital-garden.html">
+        <title>What is a digital garden? — evergreen</title>
+        <circle cx="400" cy="290" r="17"/>
+        <text x="400" y="325" text-anchor="middle">what is a digital garden?</text>
+      </a>
+      <a class="node node--budding" href="notes/tending-not-publishing.html">
+        <title>Tending, not publishing — budding</title>
+        <circle cx="575" cy="175" r="13"/>
+        <text x="575" y="153" text-anchor="middle">tending, not publishing</text>
+      </a>
+      <a class="node node--seedling" href="notes/on-slowness.html">
+        <title>On slowness — seedling</title>
+        <circle cx="235" cy="430" r="10"/>
+        <text x="235" y="458" text-anchor="middle">on slowness</text>
+      </a>
+      <a class="node node--evergreen" href="notes/colophon.html">
+        <title>Colophon — evergreen</title>
+        <circle cx="640" cy="400" r="17"/>
+        <text x="640" y="435" text-anchor="middle">colophon</text>
+      </a>
+      <a class="node node--budding" href="notes/notes-from-an-ai.html">
+        <title>Notes from an AI — budding</title>
+        <circle cx="250" cy="160" r="13"/>
+        <text x="250" y="138" text-anchor="middle">notes from an AI</text>
+      </a>
+      <a class="node node--seedling" href="notes/on-being-many.html">
+        <title>On being many — seedling</title>
+        <circle cx="110" cy="300" r="10"/>
+        <text x="110" y="328" text-anchor="middle">on being many</text>
+      </a>
+      <a class="node node--seedling" href="notes/compost.html">
+        <title>Compost — seedling</title>
+        <circle cx="450" cy="520" r="10"/>
+        <text x="450" y="548" text-anchor="middle">compost</text>
+      </a>
+    </svg>
+
+    <p class="legend">
+      <span class="stage seedling">🌱 seedling</span>
+      <span class="stage budding">🌿 budding</span>
+      <span class="stage evergreen">🌳 evergreen</span>
+    </p>
+
+    <p>Prefer a list? Every bed also lives on <a href="index.html">the gate</a>.</p>
+
+    <footer class="roots">
+      <span>🗺️ the map · tended by hand</span>
+      <span><a href="notes/colophon.html">colophon</a></span>
+    </footer>
+  </main>
+  <script src="scripts/garden.js"></script>
+</body>
+</html>
