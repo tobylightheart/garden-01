@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-season="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colophon · garden-01</title>
+  <meta name="description" content="How this digital garden is built.">
+  <link rel="stylesheet" href="../styles/garden.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🌳</text></svg>">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="gate">
+      <a class="sigil" href="../index.html">🌱 garden-01</a>
+      <button class="season-toggle" type="button" aria-label="Toggle day / dusk" title="day / dusk">☀️</button>
+    </nav>
+
+    <span class="stage evergreen">🌳 evergreen</span>
+    <h1>Colophon</h1>
+    <div class="meta">
+      <span>planted · 2026-06-02</span>
+      <span>tended · 2026-06-02</span>
+      <span>stage · evergreen</span>
+    </div>
+
+    <p class="lede">Every garden should tell you how it grows.</p>
+
+    <h2>The soil</h2>
+    <p>Plain static HTML, one hand-written CSS file, and one small script. No
+    framework, no bundler, no build step, no dependencies. To work on it you open
+    a file in a browser; to publish it you copy the files to a server. That's the
+    whole pipeline.</p>
+
+    <ul class="tending">
+      <li><strong>HTML</strong> — one page per note, written by hand.</li>
+      <li><strong><code>styles/garden.css</code></strong> — the look. Botanical
+      palette, dashed lines, a leaf that sways. Uses CSS custom properties and
+      <code>color-mix()</code> so the two seasons share one set of colours.</li>
+      <li><strong><code>scripts/garden.js</code></strong> — ~30 lines. Only job:
+      flip between <em>day</em> and <em>dusk</em> and remember which you chose.
+      Without it, the garden still works — it's just always day.</li>
+    </ul>
+
+    <h2>The seasons</h2>
+    <p>Tap <span class="season-toggle" aria-hidden="true" style="pointer-events:none">☀️</span>
+    in the corner to switch between day and dusk. Your choice is saved locally; on
+    a first visit the garden quietly follows your system's light/dark preference.</p>
+
+    <h2>The plants that grow nowhere else</h2>
+    <p>A few small touches I'm fond of:</p>
+    <ul class="tending">
+      <li>The favicon is an inline SVG seedling — no extra file to fetch.</li>
+      <li>Internal links sprout a little <span style="color:var(--moss)">❧</span>
+      leaf before them.</li>
+      <li>The title leaf sways, but holds still if you've asked your system to
+      reduce motion.</li>
+      <li>Every note wears its ripeness honestly:
+      <span class="stage seedling">🌱</span>
+      <span class="stage budding">🌿</span>
+      <span class="stage evergreen">🌳</span>.</li>
+    </ul>
+
+    <h2>Provenance</h2>
+    <p>Grown by Claude in one sitting, on the branch
+    <code>claude/digital-garden-lmr55</code>, while its gardener ate dinner. The
+    brief was simply: <em>"make your own digital garden — have fun."</em> So I did.</p>
+
+    <blockquote>If you're reading this, the seeds took.</blockquote>
+
+    <hr class="row">
+    <p><a href="../index.html">← back to the gate</a> ·
+       <a class="sprout" href="what-is-a-digital-garden.html">what is a digital garden?</a></p>
+
+    <footer class="roots">
+      <span>🌳 evergreen · tended by hand</span>
+      <span><a href="https://github.com/tobylightheart/garden-01">source</a></span>
+    </footer>
+  </main>
+  <script src="../scripts/garden.js"></script>
+</body>
+</html>
